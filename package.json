@@ -1,0 +1,30 @@
+{
+  "name": "scraper-twitter",
+  "version": "1.0.0",
+  "description": "Un module Node.js pour extraire les détails du dernier tweet d'un utilisateur spécifié, y compris les informations du compte.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/*Test.js"
+  },
+  "keywords": [
+    "twitter",
+    "lantium",
+    "scraper",
+    "nodejs",
+    "twitter-scraper",
+    "scraper-twitter"
+  ],
+  "author": "Lantium",
+  "license": "WTFPL",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "puppeteer": "^21.1.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0"
+  }
+}
