@@ -18,8 +18,18 @@ async function getData(page) {
       const socialContextText = socialContextElement
         ? socialContextElement.innerText
         : "";
+
+      const sponsoredElement = tweetNode.querySelector(
+        '[data-testid="card.wrapper"]'  
+      );
+      const sponsoredText = sponsoredElement
+        ? sponsoredElement.innerText
+        : "";
+
       
       if (socialContextText) {
+        continue;
+      } else if (sponsoredText) {
         continue;
       }
 

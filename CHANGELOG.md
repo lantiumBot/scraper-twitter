@@ -7,6 +7,13 @@ et ce projet adhère au [Versionnement Sémantique](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
-## [0.0.1] - 2023-09-02
+## [1.0.1] - 2023-09-03
+### Fixed
+- Ajout d'une const pour gérer les tweet sponsorisés.
+  
+### Added
+- Ajout du repo sur GitHub.  
+
+## [1.0.0] - 2023-09-02
 ### Added
 - Publication du projet.

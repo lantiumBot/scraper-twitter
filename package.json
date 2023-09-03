@@ -1,6 +1,6 @@
 {
   "name": "scraper-twitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Un module Node.js pour extraire les détails du dernier tweet d'un utilisateur spécifié, y compris les informations du compte.",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
   ],
   "author": "Lantium",
   "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lantiumBot/scraper-twitter.git"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.3.1",
