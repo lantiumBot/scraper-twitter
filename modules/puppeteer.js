@@ -33,14 +33,14 @@ const puppet = async (tweetName) => {
     try {
     await page.waitForSelector('div[data-testid="cellInnerDiv"]');
     } catch (error) {
-      throw new Error("Le compte n'existe pas.");
+      throw new Error("The account does not exist.");
     }
 
     const data = await getData(page);
     const info = await getInfo(page);
 
     if (!data || !info) {
-      throw new Error("Il n'y a pas de tweet récent.");
+      throw new Error("There are no recent tweets.");
     }
 
     const result = {

@@ -77,7 +77,7 @@ async function getData(page) {
       break;
     }
   } catch (error) {
-      throw new Error("Il n'y a pas de tweet récent.");
+      throw new Error("There are no recent tweets.");
   }
 
     return firstNormalTweet;
