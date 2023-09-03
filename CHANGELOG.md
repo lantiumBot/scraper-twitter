@@ -1,19 +1,23 @@
 # Changelog
 
-Toutes les modifications notables de ce projet seront documentées dans ce fichier.
+All notable changes to this project will be documented in this file.
 
-Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
-et ce projet adhère au [Versionnement Sémantique](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Versionnement Sémantique](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2023-09-03
+### Added
+- Translated the entire module to English for broader accessibility.
+
 ## [1.0.1] - 2023-09-03
 ### Fixed
-- Ajout d'une const pour gérer les tweet sponsorisés.
+- Added a constant to handle sponsored tweets.
   
 ### Added
-- Ajout du repo sur GitHub.  
+- Added the repo on GitHub.
 
 ## [1.0.0] - 2023-09-02
 ### Added
-- Publication du projet.
+- Project release.

@@ -12,14 +12,21 @@ async function checkTweet(username) {
     try {
       firstNormalTweet = await puppet(username);
     } catch (error) {
+      if (error === "The account does not exist.") {
+        throw new Error("The account does not exist.");
+      } else if (error === "There are no recent tweets.") {
+        throw new Error("There are no recent tweets.");
+      } else {
+
       attempts++;
 
-      console.error(`Une erreur s'est produite, nouvelle tentative... (Essai ${attempts}/${maxAttempts})`);
+      console.error(`An error has occurred, try again... (${attempts}/${maxAttempts})`);
+      }
     }
   }
 
   if (firstNormalTweet === null) {
-    throw new Error("Impossible de récupérer le tweet.");
+    throw new Error("Unable to retrieve the tweet.");
   }
 
   return firstNormalTweet;
