@@ -28,14 +28,14 @@ async function getInfo(page) {
     bio = bio === "" ? null : bio;
 
     const followingElement = document.querySelector('a[href$="/following"]');
-    const followersElement = document.querySelector('a[href$="/followers"]');
+    const followersElement = document.querySelector('a[href$="/verified_followers"]');
 
     const following = followingElement
       ? followingElement.innerText.split(" ")[0]
       : null;
-    const followers = followersElement
-      ? followersElement.innerText.split(" ")[0]
-      : null;
+     const followers = followersElement
+       ? followersElement.innerText.split(" ")[0]
+       : null;
 
     info = {
       username,

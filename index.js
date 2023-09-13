@@ -10,7 +10,9 @@ async function checkTweet(username) {
 
   while (firstNormalTweet === null && attempts < maxAttempts) {
     try {
+      console.log('avant');
       firstNormalTweet = await puppet(username);
+      console.log("Après")
     } catch (error) {
       if (error === "The account does not exist.") {
         throw new Error("The account does not exist.");
