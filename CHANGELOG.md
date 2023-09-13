@@ -7,6 +7,17 @@ and this project adheres to [Versionnement Sémantique](https://semver.org/spec/
 
 ## [Unreleased]
 
+## [1.2.0] - 2023-09-13
+### Added
+- Added condition to skip undesired tweets in `getData`.
+- Added logging for easier debugging in `puppeteer.js`.
+
+### Changed
+- Modified error handling to allow `getInfo` retrieval even if `getData` fails.
+
+### Fixed
+- Improved code to prevent errors when account or tweets do not exist.
+
 ## [1.1.2] - 2023-09-13
 ### Fixed
 - Delete console.log

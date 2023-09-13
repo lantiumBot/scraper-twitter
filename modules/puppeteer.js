@@ -18,38 +18,57 @@ const puppet = async (tweetName) => {
   });
   const page = await browser.newPage();
 
-    await page.setCookie({
-      name: "auth_token",
-      value: process.env.auth_token,
-      domain: "twitter.com",
-    });
+  // for DEBUG
+  // page.on('console', msg => console.log('PAGE LOG:', msg.text()));
 
-    await page.goto(`https://twitter.com/${tweetName}`);
-    await page.setViewport({
-      width: 1920,
-      height: 1080,
-    });
+  await page.setCookie({
+    name: "auth_token",
+    value: process.env.auth_token,
+    domain: "twitter.com",
+  });
 
-    try {
+  await page.goto(`https://twitter.com/${tweetName}`);
+  await page.setViewport({
+    width: 1920,
+    height: 1080,
+  });
+
+  let data = null;
+  let info = null;
+
+  try {
     await page.waitForSelector('div[data-testid="cellInnerDiv"]');
-    } catch (error) {
-      throw new Error("The account does not exist.");
+  } catch (error) {
+    console.error("Le compte n'existe pas");
+    throw new Error("The account does not exist.");
+  }
+
+  try {
+    data = await getData(page);
+    if (!data) {
+      console.log("Aucun tweet trouvé.");
     }
+  } catch (error) {
+    console.error("Erreur lors de la récupération des données : ", error);
+  }
 
-    const data = await getData(page);
-    const info = await getInfo(page);
-
-    if (!data || !info) {
-      throw new Error("There are no recent tweets.");
+  try {
+    info = await getInfo(page);
+    if (!info) {
+      console.log("Aucune info trouvée.");
     }
+  } catch (error) {
+    console.error("Erreur lors de la récupération des infos : ", error);
+  }
 
-    const result = {
-      ...data,
-      ...info,
-    };
+  if (!data && !info) {
+    throw new Error("Pas de tweets récents et impossible de récupérer les infos.");
+  }
 
-    await browser.close();
-    return result;
+  const result = { ...data, ...info };
+
+  await browser.close();
+  return result;
 };
 
 module.exports = puppet;
