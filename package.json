@@ -1,6 +1,6 @@
 {
   "name": "scraper-twitter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Node.js module to extract details of a specified user's last tweet, including account information.",
   "main": "index.js",
   "scripts": {

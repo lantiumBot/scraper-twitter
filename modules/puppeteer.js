@@ -12,10 +12,12 @@ const getData = require("./getData");
 const getInfo = require("./getInfo");
 
 const puppet = async (tweetName) => {
+  console.log('coucou puppet')
   const browser = await puppeteer.launch({
     headless: "new",
     args: ["--no-sandbox"],
   });
+  console.log("coucou 20")
   const page = await browser.newPage();
 
     await page.setCookie({
