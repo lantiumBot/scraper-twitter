@@ -7,6 +7,10 @@ and this project adheres to [Versionnement Sémantique](https://semver.org/spec/
 
 ## [Unreleased]
 
+## [1.1.2] - 2023-09-13
+### Fixed
+- Delete console.log
+
 ## [1.1.1] - 2023-09-13
 ### Changed
 - Modified the selector in `getInfo.js` for `followersElement` from `a[href$="/followers"]` to `a[href$="/verified_followers"]`.
