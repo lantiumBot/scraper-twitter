@@ -24,10 +24,10 @@ const puppet = async (tweetName) => {
   await page.setCookie({
     name: "auth_token",
     value: process.env.auth_token,
-    domain: "twitter.com",
+    domain: ".x.com",
   });
 
-  await page.goto(`https://twitter.com/${tweetName}`);
+  await page.goto(`https://x.com/${tweetName}`);
   await page.setViewport({
     width: 1920,
     height: 1080,

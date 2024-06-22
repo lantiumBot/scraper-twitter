@@ -39,7 +39,7 @@ auth_token= L'auth token de votre compte Twitter.
 ```
 ### Retrieve the auth_token
 
-To get your auth_token, go to this page, you must log in unless you are already logged in. Press CTRL + F12, then go to Storage (Firefox) / Application (Chrome and Edge), go to Cookies > https://twitter.com > auth_token, and you can now copy your auth_token and paste it into your .env file.
+To get your auth_token, go to this page, you must log in unless you are already logged in. Press CTRL + F12, then go to Storage (Firefox) / Application (Chrome and Edge), go to Cookies > https://x.com > auth_token, and you can now copy your auth_token and paste it into your .env file.
 
 ## Return
 
@@ -64,7 +64,7 @@ Here is an example output of the `scraperTweet` function:
 ```json
 {
     "tweetText": "I am a tweet!",
-    "tweetLink": "https://twitter.com/lan7ium/status/1234567890123456789",
+    "tweetLink": "https://x.com/lan7ium/status/1234567890123456789",
     "tweetTime": "2020-03-01T00:00:00.000Z",
     "gifURL": [],
     "imgURLs": [

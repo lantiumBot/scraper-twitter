@@ -63,7 +63,7 @@ async function getData(page) {
 
         firstNormalTweet = {
           tweetText,
-          tweetLink: "https://twitter.com" + tweetLink,
+          tweetLink: "https://x.com" + tweetLink,
           tweetTime,
           gifURL,
           imgURLs: imgURLs.map((imgURL) => {
