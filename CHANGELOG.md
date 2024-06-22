@@ -7,6 +7,11 @@ and this project adheres to [Versionnement Sémantique](https://semver.org/spec/
 
 ## [Unreleased]
 
+## [1.3.0] - 2024-06-23
+### Update
+- Update dependencies
+- Update domain twitter.com to x.com
+
 ## [1.2.0] - 2023-09-13
 ### Added
 - Added condition to skip undesired tweets in `getData`.
